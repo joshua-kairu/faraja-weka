@@ -26,7 +26,7 @@ public abstract class Person {
 
     private GENDER gender = GENDER.NONE; // ditto. Start with none
 
-    public String uniqueID; // ditto - "M001" is the first male, "F001" is the first female
+    private String uniqueID; // ditto - "M001" is the first male, "F001" is the first female
 
     private String name; // ditto
 
