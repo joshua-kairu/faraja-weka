@@ -3,7 +3,7 @@ package com.joslittho.farajaweka.model;
 /**
  * A female {@link Person}
  */
-// begin class Male
+// begin class Female
 public class Female extends Person {
 
     /* CONSTANTS */
@@ -225,4 +225,206 @@ public class Female extends Person {
     
     /* Other Methods */
 
-} // end class Male
+    /* INNER CLASSES */
+
+    /** Builder for the {@link Female} class */
+    // begin inner class Builder
+    public class Builder {
+
+        /* CONSTANTS */
+
+        /* VARIABLES */
+
+        private String uniqueID;
+        private String name;
+        private int age;
+        private String phoneNumber;
+        private String location;
+        private String bloodPressure;
+        private double weight;
+        private int height;
+        private double bmi;
+        private double bloodGlucose;
+        private boolean hasHistoryOfCancer;
+        private boolean hasPriorHistoryOfCancerInFamily;
+        private String historyFamilyCancers;
+        private boolean hasHistoryOfSmokingCigarettes;
+        private boolean hasBeenPregnant;
+        private int numberOfTimesPregnant;
+        private boolean hasChildren;
+        private int numberOfChildren;
+        private boolean getsMenstrualPeriods;
+        private Person.BREAST_EXAMINATION breastExamination;
+        private Person.BREAST_MASS breastMass;
+        private Female.CERVICAL_EXAMINATION cervicalExamination;
+        private Female.CERVICAL_ABNORMAL cervicalAbnormal;
+        private String cervicalAbnormalOthers;
+        private String referrals;
+
+        /* CONSTRUCTOR */
+
+        /**
+         * Constructor to take the lady's unique ID and name
+         *
+         * @param uniqueID The lady's unique ID
+         * @param name The lady's name
+         * */
+        // begin constructor
+        public Builder( String uniqueID, String name ) {
+
+            // 0. initialize unique ID
+            // 1. initialize name
+
+            // 0. initialize unique ID
+            // 1. initialize name
+
+            this.uniqueID = uniqueID;
+            this.name = name;
+
+        } // end constructor
+
+        /* METHODS */
+
+        /* Getters and Setters */
+
+        /* Overrides */
+
+        /* Other Methods */
+
+        public Builder setUniqueID( String uniqueID ) {
+            this.uniqueID = uniqueID;
+            return this;
+        }
+
+        public Builder setName( String name ) {
+            this.name = name;
+            return this;
+        }
+
+        public Builder setAge( int age ) {
+            this.age = age;
+            return this;
+        }
+
+        public Builder setPhoneNumber( String phoneNumber ) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+
+        public Builder setLocation( String location ) {
+            this.location = location;
+            return this;
+        }
+
+        public Builder setBloodPressure( String bloodPressure ) {
+            this.bloodPressure = bloodPressure;
+            return this;
+        }
+
+        public Builder setWeight( double weight ) {
+            this.weight = weight;
+            return this;
+        }
+
+        public Builder setHeight( int height ) {
+            this.height = height;
+            return this;
+        }
+
+        public Builder setBMI( double bmi ) {
+            this.bmi = bmi;
+            return this;
+        }
+
+        public Builder setBloodGlucose( double bloodGlucose ) {
+            this.bloodGlucose = bloodGlucose;
+            return this;
+        }
+
+        public Builder setHasHistoryOfCancer( boolean hasHistoryOfCancer ) {
+            this.hasHistoryOfCancer = hasHistoryOfCancer;
+            return this;
+        }
+
+        public Builder setHasPriorHistoryOfCancerInFamily( boolean hasPriorHistoryOfCancerInFamily ) {
+            this.hasPriorHistoryOfCancerInFamily = hasPriorHistoryOfCancerInFamily;
+            return this;
+        }
+
+        public Builder setHistoryFamilyCancers( String historyFamilyCancers ) {
+            this.historyFamilyCancers = historyFamilyCancers;
+            return this;
+        }
+
+        public Builder setHasHistoryOfSmokingCigarettes( boolean hasHistoryOfSmokingCigarettes ) {
+            this.hasHistoryOfSmokingCigarettes = hasHistoryOfSmokingCigarettes;
+            return this;
+        }
+
+        public Builder setHasBeenPregnant( boolean hasBeenPregnant ) {
+            this.hasBeenPregnant = hasBeenPregnant;
+            return this;
+        }
+
+        public Builder setNumberOfTimesPregnant( int numberOfTimesPregnant ) {
+            this.numberOfTimesPregnant = numberOfTimesPregnant;
+            return this;
+        }
+
+        public Builder setHasChildren( boolean hasChildren ) {
+            this.hasChildren = hasChildren;
+            return this;
+        }
+
+        public Builder setNumberOfChildren( int numberOfChildren ) {
+            this.numberOfChildren = numberOfChildren;
+            return this;
+        }
+
+        public Builder setGetsMenstrualPeriods( boolean getsMenstrualPeriods ) {
+            this.getsMenstrualPeriods = getsMenstrualPeriods;
+            return this;
+        }
+
+        public Builder setBreastExamination( Person.BREAST_EXAMINATION breastExamination ) {
+            this.breastExamination = breastExamination;
+            return this;
+        }
+
+        public Builder setBreastMass( Person.BREAST_MASS breastMass ) {
+            this.breastMass = breastMass;
+            return this;
+        }
+
+        public Builder setCervicalExamination( Female.CERVICAL_EXAMINATION cervicalExamination ) {
+            this.cervicalExamination = cervicalExamination;
+            return this;
+        }
+
+        public Builder setCervicalAbnormal( Female.CERVICAL_ABNORMAL cervicalAbnormal ) {
+            this.cervicalAbnormal = cervicalAbnormal;
+            return this;
+        }
+
+        public Builder setCervicalAbnormalOthers( String cervicalAbnormalOthers ) {
+            this.cervicalAbnormalOthers = cervicalAbnormalOthers;
+            return this;
+        }
+
+        public Builder setReferrals( String referrals ) {
+            this.referrals = referrals;
+            return this;
+        }
+
+        public Female createFemale() {
+            return new Female( uniqueID, name, age, phoneNumber, location, bloodPressure, weight,
+                    height, bmi, bloodGlucose, hasHistoryOfCancer, hasPriorHistoryOfCancerInFamily,
+                    historyFamilyCancers, hasHistoryOfSmokingCigarettes, hasBeenPregnant,
+                    numberOfTimesPregnant, hasChildren, numberOfChildren, getsMenstrualPeriods,
+                    breastExamination, breastMass, cervicalExamination, cervicalAbnormal,
+                    cervicalAbnormalOthers, referrals );
+        }
+
+    } // end inner class Builder
+
+} // end class Female
