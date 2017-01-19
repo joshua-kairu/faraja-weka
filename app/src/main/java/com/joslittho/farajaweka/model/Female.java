@@ -229,7 +229,7 @@ public class Female extends Person {
 
     /** Builder for the {@link Female} class */
     // begin inner class Builder
-    public class Builder {
+    public static class Builder {
 
         /* CONSTANTS */
 

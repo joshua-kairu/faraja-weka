@@ -110,7 +110,7 @@ public class Male extends Person {
 
     /** Builder for the {@link Male} class */
     // begin inner class Builder
-    public class Builder {
+    public static class Builder {
 
         /* CONSTANTS */
 
