@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- layout for the examination fragment when the person is female -->
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:paddingLeft="@dimen/layout_padding"
+
+    android:paddingRight="@dimen/layout_padding"
+
+    >
+
+    <!-- Breast examination -->
+
+    <include
+
+        android:id="@+id/examination_female_include_breast"
+
+        layout="@layout/layout_breast_examination"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        />
+
+    <!-- Cervical examination -->
+
+    <!-- radio group for the results of cervical examination -->
+
+    <RadioGroup
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:layout_marginStart="@dimen/layout_padding"
+
+        android:id="@+id/examination_female_cervical_rg_results"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:layout_below="@id/examination_female_include_breast"
+
+        >
+
+        <!-- examination not done -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_female_cervical_rb_not_done"
+
+            android:text="Not done"
+
+            />
+
+        <!-- examination result normal -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_female_cervical_rb_normal"
+
+            android:text="Normal"
+
+            />
+
+        <!-- examination result abnormal -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_female_cervical_rb_abnormal"
+
+            android:text="Abnormal"
+
+            />
+
+    </RadioGroup>
+
+    <!-- radio group for the kinds of abnormalities possible in the results -->
+
+    <RadioGroup
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+
+        android:layout_marginStart="@dimen/radio_group_second_margin"
+
+        android:id="@+id/examination_female_cervical_rg_results_abnormalities"
+
+        >
+
+        <!-- positive VIA with aceto-white only -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_female_cervical_rb_abnormal_positive_aceto_white_only"
+
+            android:text="Positive VIA + Aceto-white only"
+
+            />
+
+        <!-- positive VIA with suspicious lesion -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_female_cervical_rb_abnormal_positive_suspicious_lesion"
+
+            android:text="Positive VIA + Suspicious lesion"
+
+            />
+
+        <!-- Others -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_female_cervical_rb_abnormal_others"
+
+            android:text="Others"
+
+            />
+
+    </RadioGroup>
+
+    <!-- edit text for explaining the other abnormal results -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/examination_female_cervical_til_abnormalities_others_explanation"
+
+        android:layout_alignBottom="@id/examination_female_cervical_rg_results_abnormalities"
+
+        android:layout_alignEnd="@id/examination_female_cervical_rg_results_abnormalities"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="Explain"
+
+            tools:text="Cytoplasmic redundancy check"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+</RelativeLayout>

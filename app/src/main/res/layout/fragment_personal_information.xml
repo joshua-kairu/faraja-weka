@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- layout for the personal information tab -->
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:paddingStart="@dimen/layout_padding"
+
+    android:paddingEnd="@dimen/layout_padding"
+
+    >
+
+    <!-- text for the unique ID -->
+
+    <TextView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/personal_info_tv_unique_id"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:gravity="center_vertical"
+
+        style="@style/TextAppearance.AppCompat.Title"
+
+        tools:text="Unique ID: M001"
+
+        />
+
+    <!-- edit text for the name -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/personal_info_til_name"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:layout_below="@id/personal_info_tv_unique_id"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="Name"
+
+            tools:text="Geremi Klartenburg"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- edit text for the age -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:id="@+id/personal_info_til_age"
+
+        android:layout_toEndOf="@id/personal_info_til_name"
+
+        android:layout_marginStart="@dimen/space_between_content_areas"
+
+        android:layout_below="@id/personal_info_tv_unique_id"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="Age"
+
+            tools:text="20 years"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- edit text for the phone number -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:id="@+id/personal_info_til_phone_number"
+
+        android:layout_below="@id/personal_info_til_name"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="Phone Number"
+
+            tools:text="0723 453 878"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- edit text for the location -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:id="@+id/personal_info_til_location"
+
+        android:layout_below="@id/personal_info_til_phone_number"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="Location"
+
+            tools:text="Mwimuto"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+</RelativeLayout>

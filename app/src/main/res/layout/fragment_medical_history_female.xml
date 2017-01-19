@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- layout for the medical history fragment when the person is female -->
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:paddingStart="@dimen/layout_padding"
+
+    android:paddingEnd="@dimen/layout_padding"
+
+    >
+
+    <!-- Pregnancy -->
+
+    <!-- label for if the lady has been pregnant -->
+
+    <TextView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/medical_history_female_tv_has_been_pregnant"
+
+        android:layout_centerVertical="true"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:text="Have you been pregnant?"
+
+        />
+
+    <!-- radio group for if the lady has been pregnant -->
+
+    <RadioGroup
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:layout_marginStart="@dimen/layout_padding"
+
+        android:id="@+id/medical_history_female_rg_has_been_pregnant_status"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:layout_below="@id/medical_history_female_tv_has_been_pregnant"
+
+        >
+
+        <!-- yes the lady has been pregnant -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/medical_history_female_rg_has_been_pregnant_yes"
+
+            android:text="@string/checkbox_positive"
+
+            />
+
+        <!-- no the lady hasn't been pregnant -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/medical_history_female_rg_has_been_pregnant_no"
+
+            android:text="@string/checkbox_negative"
+
+            />
+
+    </RadioGroup>
+
+    <!-- edit text for the number of times the lady's been pregnant -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/medical_history_female_til_number_of_times_pregnant"
+
+        android:layout_below="@id/medical_history_female_tv_has_been_pregnant"
+
+        android:layout_marginStart="@dimen/space_between_content_areas"
+
+        android:layout_toEndOf="@id/medical_history_female_rg_has_been_pregnant_status"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="How many times?"
+
+            tools:text="2"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Number of children -->
+
+    <!-- label for if the lady has children -->
+
+    <TextView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/medical_history_female_tv_has_children"
+
+        android:layout_centerVertical="true"
+
+        android:layout_below="@id/medical_history_female_rg_has_been_pregnant_status"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:text="Do you have children?"
+
+        />
+
+    <!-- radio group for if the lady has children -->
+
+    <RadioGroup
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:layout_marginStart="@dimen/layout_padding"
+
+        android:id="@+id/medical_history_female_rg_has_children_status"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:layout_below="@id/medical_history_female_tv_has_children"
+
+        >
+
+        <!-- yes the lady has children -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/medical_history_female_rg_has_children_yes"
+
+            android:text="@string/checkbox_positive"
+
+            />
+
+        <!-- no the lady hasn't any children -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/medical_history_female_rg_has_children_no"
+
+            android:text="@string/checkbox_negative"
+
+            />
+
+    </RadioGroup>
+
+    <!-- edit text for the number of children the lady has -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/medical_history_female_til_number_of_children"
+
+        android:layout_below="@id/medical_history_female_tv_has_children"
+
+        android:layout_marginStart="@dimen/space_between_content_areas"
+
+        android:layout_toEndOf="@id/medical_history_female_rg_has_children_status"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="How many?"
+
+            tools:text="2"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Menstrual Periods -->
+
+    <!-- label for if the lady gets menstrual periods -->
+
+    <TextView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/medical_history_female_tv_gets_menstrual_periods"
+
+        android:layout_centerVertical="true"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:text="Do you get menstrual periods?"
+
+        />
+
+    <!-- radio group for if the lady gets menstrual periods -->
+
+    <RadioGroup
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:layout_marginStart="@dimen/layout_padding"
+
+        android:id="@+id/medical_history_female_rg_gets_menstrual_periods_status"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:layout_below="@id/medical_history_female_tv_gets_menstrual_periods"
+
+        >
+
+        <!-- yes the lady gets menstrual periods -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/medical_history_female_rg_gets_menstrual_periods_yes"
+
+            android:text="@string/checkbox_positive"
+
+            />
+
+        <!-- no the lady doesn't get menstrual periods -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/medical_history_female_rg_gets_menstrual_periods_no"
+
+            android:text="@string/checkbox_negative"
+
+            />
+
+    </RadioGroup>
+
+    <!-- use the base medical history layout -->
+
+    <include
+
+        layout="@layout/layout_medical_history_base"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        />
+
+</RelativeLayout>

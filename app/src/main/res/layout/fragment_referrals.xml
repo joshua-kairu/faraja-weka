@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- layout for the referrals fragment -->
+
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:paddingLeft="@dimen/layout_padding"
+
+    android:paddingRight="@dimen/layout_padding"
+
+    >
+
+    <!-- edit text for referrals -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/referrals_til_referrals"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="Referrals"
+
+            android:minLines="5"
+
+            android:inputType="textMultiLine"
+
+            tools:text="One other awesome referral"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+</FrameLayout>

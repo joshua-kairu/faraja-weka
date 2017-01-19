@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- layout for the person -->
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="@dimen/listview_item_height"
+
+    android:paddingTop="@dimen/space_between_content_areas"
+
+    android:paddingBottom="@dimen/space_between_content_areas"
+
+    >
+
+    <!-- text for the person's gender -->
+
+    <TextView
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:id="@+id/person_list_item_tv_gender"
+
+        android:textSize="@dimen/person_list_item_gender_text_height"
+
+        android:layout_alignParentStart="true"
+
+        android:layout_centerHorizontal="true"
+
+        tools:text="@string/gender_male_short"
+
+        />
+
+    <!-- text for the person's name -->
+
+    <TextView
+
+        android:id="@+id/person_list_item_tv_name"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/layout_padding"
+
+        android:layout_marginTop="@dimen/layout_padding"
+
+        android:layout_toEndOf="@id/person_list_item_tv_gender"
+
+        android:layout_centerVertical="true"
+
+        style="@style/TextAppearance.AppCompat.Headline"
+
+        tools:text="Joshua Kairu"
+
+        />
+
+    <!-- text for the person's age -->
+
+    <TextView
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:id="@+id/person_list_item_tv_age"
+
+        android:layout_marginTop="@dimen/layout_padding"
+
+        android:layout_alignParentEnd="true"
+
+        android:gravity="end"
+
+        android:layout_toEndOf="@id/person_list_item_tv_name"
+
+        android:layout_centerVertical="true"
+
+        style="@style/TextAppearance.AppCompat.Headline"
+
+        tools:text="25 years"
+
+        />
+
+</RelativeLayout>

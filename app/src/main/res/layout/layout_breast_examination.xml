@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- layout for breast examination -->
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:layout_marginTop="@dimen/space_between_content_areas"
+
+    android:layout_marginBottom="@dimen/space_between_content_areas"
+
+    >
+
+    <!-- label for results of breast examination -->
+
+    <TextView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/examination_breast_tv_results"
+
+        android:layout_centerVertical="true"
+
+        android:text="What were the results of breast examination?"
+
+        />
+
+    <!-- radio group for the breast examination results -->
+
+    <RadioGroup
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:id="@+id/examination_breast_rg_results"
+
+        android:layout_marginStart="@dimen/layout_padding"
+
+        android:layout_below="@id/examination_breast_tv_results"
+
+        >
+
+        <!-- examination not done -->
+
+        <RadioButton
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_breast_rb_not_done"
+
+            android:text="Not done"
+
+            />
+
+        <!-- result normal -->
+
+        <RadioButton
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_breast_rb_normal"
+
+            android:text="Normal"
+
+            />
+
+        <!-- result skin changes -->
+
+        <RadioButton
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_breast_rb_skin_changes"
+
+            android:text="Skin changes"
+
+            />
+
+        <!-- result nipple discharge -->
+
+        <RadioButton
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_breast_rb_nipple_discharge"
+
+            android:text="Nipple discharge"
+
+            />
+
+        <!-- result mass -->
+
+        <RadioButton
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_breast_rb_mass"
+
+            android:text="Mass"
+
+            />
+
+    </RadioGroup>
+
+    <!-- radio group for the kinds of masses possible in the results -->
+
+    <RadioGroup
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+
+        android:layout_marginStart="@dimen/radio_group_second_margin"
+
+        android:id="@+id/examination_breast_rg_results_mass_kinds"
+
+        android:layout_below="@id/examination_breast_rg_results"
+
+        >
+
+        <!-- a mass on the RHS (Right Hand Side) -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_breast_rb_mass_rhs"
+
+            android:text="RHS"
+
+            />
+
+        <!-- a mass on the LHS (Left Hand Side) -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_breast_rb_mass_lhs"
+
+            android:text="LHS"
+
+            />
+
+        <!-- a mass found bilaterally -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/examination_breast_rb_mass_bilateral"
+
+            android:text="Bilateral"
+
+            />
+
+    </RadioGroup>
+
+</RelativeLayout>

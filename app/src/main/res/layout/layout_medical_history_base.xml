@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- base layout for medical history -->
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    >
+
+    <!-- Prior History of Cancer -->
+
+    <!-- label for if there has been prior history of cancer -->
+
+    <TextView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/medical_history_tv_prior_history_cancer"
+
+        android:layout_centerVertical="true"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:text="Any prior history of cancer?"
+
+        />
+
+    <!-- radio group for if there has been prior history of cancer -->
+
+    <RadioGroup
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:layout_marginStart="@dimen/layout_padding"
+
+        android:id="@+id/medical_history_rg_prior_history_cancer_status"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:layout_below="@id/medical_history_tv_prior_history_cancer"
+
+        >
+
+        <!-- yes prior history of cancer -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/medical_history_rg_history_cancer_yes"
+
+            android:text="@string/checkbox_positive"
+
+            />
+
+        <!-- no prior history of cancer -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/medical_history_rg_history_cancer_no"
+
+            android:text="@string/checkbox_negative"
+
+            />
+
+    </RadioGroup>
+
+    <!-- History of Cancer in the Family -->
+
+    <!-- label for if there has been history of cancer in the family -->
+
+    <TextView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/medical_history_tv_history_cancer_in_family"
+
+        android:layout_centerVertical="true"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:text="Any history of cancer in the family?"
+
+        />
+
+    <!-- radio group for if there has been history of cancer in the family -->
+
+    <RadioGroup
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:layout_marginStart="@dimen/layout_padding"
+
+        android:id="@+id/medical_history_rg_history_cancer_in_family_status"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:layout_below="@id/medical_history_tv_history_cancer_in_family"
+
+        >
+
+        <!-- yes history of cancer in the family -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/medical_history_rg_history_cancer_in_family_yes"
+
+            android:text="@string/checkbox_positive"
+
+            />
+
+        <!-- no history of cancer in the family -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/medical_history_rg_history_cancer_in_family_no"
+
+            android:text="@string/checkbox_negative"
+
+            />
+
+    </RadioGroup>
+
+    <!-- edit text for the type(s) of cancer the family has faced -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/medical_history_til_types_of_cancer_in_family"
+
+        android:layout_below="@id/medical_history_tv_history_cancer_in_family"
+
+        android:layout_marginStart="@dimen/space_between_content_areas"
+
+        android:layout_toEndOf="@id/medical_history_rg_history_cancer_in_family_status"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="Type(s) of cancer in family"
+
+            tools:text="Breast, Prostate, and Liver"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- History of Smoking Cigarettes -->
+
+    <!-- label for if there has been history of smoking cigarettes -->
+
+    <TextView
+
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/medical_history_tv_history_smoking_cigarettes"
+
+        android:layout_centerVertical="true"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:text="Any history of smoking cigarettes?"
+
+        />
+
+    <!-- radio group for if there has been history of smoking cigarettes -->
+
+    <RadioGroup
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:layout_marginStart="@dimen/layout_padding"
+
+        android:id="@+id/medical_history_rg_history_smoking_cigarettes_status"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:layout_below="@id/medical_history_tv_history_smoking_cigarettes"
+
+        >
+
+        <!-- yes history of smoking cigarettes -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/medical_history_rg_history_smoking_cigarettes_yes"
+
+            android:text="@string/checkbox_positive"
+
+            />
+
+        <!-- no history of smoking cigarettes -->
+
+        <RadioButton
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/form_item_height"
+
+            android:id="@+id/medical_history_rg_history_smoking_cigarettes_no"
+
+            android:text="@string/checkbox_negative"
+
+            />
+
+    </RadioGroup>
+
+</RelativeLayout>

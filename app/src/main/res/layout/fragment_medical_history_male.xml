@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- layout for the medical history fragment when the person is male -->
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:paddingStart="@dimen/layout_padding"
+
+    android:paddingEnd="@dimen/layout_padding"
+
+    >
+
+    <!-- use the base medical history layout - that's all there is to it :-) -->
+
+    <include
+
+        layout="@layout/layout_medical_history_base"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        />
+
+</RelativeLayout>

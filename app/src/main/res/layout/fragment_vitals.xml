@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- layout for the vitals tab -->
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:paddingStart="@dimen/layout_padding"
+
+    android:paddingEnd="@dimen/layout_padding"
+
+    >
+
+    <!-- edit text for the blood pressure -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/vitals_til_blood_pressure"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="Blood Pressure"
+
+            tools:text="119/86"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- edit text for the weight -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:id="@+id/vitals_til_weight"
+
+        android:layout_below="@id/vitals_til_blood_pressure"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="Weight in kg"
+
+            tools:text="200kg"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- edit text for the height -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:id="@+id/vitals_til_height"
+
+        android:layout_toEndOf="@id/vitals_til_weight"
+
+        android:layout_marginStart="@dimen/space_between_content_areas"
+
+        android:layout_below="@id/vitals_til_blood_pressure"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="Height in centimeters"
+
+            tools:text="172 cm"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- edit text for the BMI -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:id="@+id/vitals_til_bmi"
+
+        android:layout_below="@id/vitals_til_weight"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="BMI"
+
+            tools:text="2.3"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- edit text for the blood glucose -->
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:id="@+id/vitals_til_blood_glucose"
+
+        android:layout_below="@id/vitals_til_bmi"
+
+        >
+
+        <android.support.design.widget.TextInputEditText
+
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+
+            android:hint="Blood Glucose"
+
+            tools:text="456"
+
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+</RelativeLayout>
