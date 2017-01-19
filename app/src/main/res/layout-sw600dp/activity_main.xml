@@ -31,7 +31,7 @@ and dynamically holds the selected person fragment -->
 
         android:layout_height="match_parent"
 
-        android:name="com.joslittho.baker_order.fragment.GoodsFragment"
+        android:name="com.joslittho.farajaweka.fragment.PersonsFragment"
 
         android:layout_weight="5"
 
@@ -39,7 +39,7 @@ and dynamically holds the selected person fragment -->
 
         />
 
-    <!-- dynamic selected persons container -->
+    <!-- dynamic person details container -->
 
     <FrameLayout
 

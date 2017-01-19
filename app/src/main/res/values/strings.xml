@@ -1,0 +1,63 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Faraja Weka</string>
+
+    <!-- Titles -->
+
+    <!-- title for the person details activity [CHAR LIMIT = 20] -->
+    <string name="title_selected_person">Person Details</string>
+
+    <!-- title for the personal information fragment [CHAR LIMIT = 25] -->
+    <string name="title_fragment_personal_info">Personal Information</string>
+
+    <!-- title for the vitals fragment [CHAR LIMIT = 10] -->
+    <string name="title_fragment_vitals">Vitals</string>
+
+    <!-- title for the medical history fragment [CHAR LIMIT = 20] -->
+    <string name="title_fragment_medical_history">Medical History</string>
+
+    <!-- title for the examinations fragment [CHAR LIMIT = 15] -->
+    <string name="title_fragment_examinations">Examinations</string>
+
+    <!-- title for the referrals fragment [CHAR LIMIT = 15] -->
+    <string name="title_fragment_referrals">Referrals</string>
+
+    <!-- Age -->
+
+    <!-- format for the age. A 23 year old will be displayed as "23 years" -->
+    <string name="format_age"><xliff:g id="age">%1$d</xliff:g> years</string>
+
+    <!-- Checkbox -->
+
+    <!-- label for the positive checkbox [CHAR LIMIT = 5] -->
+    <string name="checkbox_positive">Yes</string>
+
+    <!-- label for the negative checkbox [CHAR LIMIT = 5] -->
+    <string name="checkbox_negative">No</string>
+
+    <!-- Examination statuses -->
+
+    <!-- label for an undone examination [CHAR LIMIT = 15] -->
+    <string name="examination_not_done">Not done</string>
+
+    <!-- label for an examination with normal results [CHAR LIMIT = 10] -->
+    <string name="examination_normal">Normal</string>
+
+    <!-- label for an examination with abnormal results [CHAR LIMIT = 15] -->
+    <string name="examination_abnormal">Abnormal</string>
+
+    <!-- Genders -->
+
+    <!-- short form of the male gender [CHAR LIMIT = 1] -->
+    <string name="gender_male_short">M</string>
+
+    <!-- short form of the female gender [CHAR LIMIT = 1] -->
+    <string name="gender_female_short">F</string>
+
+    <!-- Unique ID -->
+
+    <!-- format for the unique ID. Should be GenderNumber eg M001 for the first male -->
+    <string name="format_unique_id"><xliff:g id="gender_letter">%1$s</xliff:g><xliff:g id="three_digit_integer">%2$3d</xliff:g>
+    </string>
+
+</resources>

@@ -2,11 +2,10 @@ package com.joslittho.farajaweka.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.joslittho.baker_order.R2;
-import com.joslittho.baker_order.adapter.GoodsAdapter;
+import com.joslittho.farajaweka.R2;
+import com.joslittho.farajaweka.adapter.PersonsAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,27 +24,25 @@ public class PersonViewHolder extends RecyclerView.ViewHolder implements View.On
 
     /* VARIABLES */
 
-    /* GoodsAdapters */
+    /* PersonsAdapters */
 
-    private GoodsAdapter mHostGoodsAdapter; // ditto
-
-    /* ImageViews */
-
-    @BindView( R2.id.good_item_iv_picture )
-    public ImageView mPictureImageView; // ditto
+    private PersonsAdapter mHostPersonsAdapter; // ditto
 
     /* TextViews */
 
-    @BindView( R2.id.good_item_tv_name )
+    @BindView( R2.id.person_list_item_tv_gender )
+    public TextView mGenderTextView; // ditto
+
+    @BindView( R2.id.person_list_item_tv_name )
     public TextView mNameTextView; // ditto
 
-    @BindView( R2.id.good_item_tv_value )
-    public TextView mValueTextView; // ditto
+    @BindView( R2.id.person_list_item_tv_age )
+    public TextView mAgeTextView; // ditto
     
     /* CONSTRUCTOR */
 
     // begin constructor
-    public PersonViewHolder( View itemView, GoodsAdapter goodsAdapter ) {
+    public PersonViewHolder( View itemView, PersonsAdapter personsAdapter ) {
 
         // 0. super stuff
         // 1. bind views
@@ -66,7 +63,7 @@ public class PersonViewHolder extends RecyclerView.ViewHolder implements View.On
 
         // 3. initialize the host adapter
 
-        mHostGoodsAdapter = goodsAdapter;
+        mHostPersonsAdapter = personsAdapter;
 
     } // end constructor
 
@@ -84,7 +81,7 @@ public class PersonViewHolder extends RecyclerView.ViewHolder implements View.On
 
         // 0. tell the adapter of the click
 
-        mHostGoodsAdapter.mGoodsAdapterOnClickHandler.onClick( this );
+        mHostPersonsAdapter.mPersonsAdapterOnClickHandler.onClick( this );
 
     } // end onClick
     

@@ -16,7 +16,7 @@
 
     android:id="@+id/detail_fl_container"
 
-    tools:context=".activity.SelectedPersonActivity"
+    tools:context=".activity.PersonDetailsActivity"
 
     tools:ignore="MergeRootFrame"
 

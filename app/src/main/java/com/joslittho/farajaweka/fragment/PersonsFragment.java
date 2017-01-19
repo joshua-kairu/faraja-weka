@@ -1,5 +1,6 @@
 package com.joslittho.farajaweka.fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,13 +10,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.joslittho.baker_order.R;
-import com.joslittho.baker_order.R2;
-import com.joslittho.baker_order.activity.SelectedGoodActivity;
-import com.joslittho.baker_order.adapter.GoodsAdapter;
-import com.joslittho.baker_order.adapter.GoodsAdapterOnClickHandler;
-import com.joslittho.baker_order.model.BakedGood;
-import com.joslittho.baker_order.viewholder.GoodViewHolder;
+
+import com.joslittho.farajaweka.R;
+import com.joslittho.farajaweka.R2;
+import com.joslittho.farajaweka.activity.PersonDetailsActivity;
+import com.joslittho.farajaweka.adapter.PersonsAdapter;
+import com.joslittho.farajaweka.adapter.PersonsAdapterOnClickHandler;
+import com.joslittho.farajaweka.model.Female;
+import com.joslittho.farajaweka.model.Male;
+import com.joslittho.farajaweka.model.Person;
+import com.joslittho.farajaweka.model.Person.GENDER;
+import com.joslittho.farajaweka.utils.Utility;
+import com.joslittho.farajaweka.viewholder.PersonViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,13 +33,13 @@ import butterknife.ButterKnife;
  * {@link Fragment} to hold the list of goods
  */
 // begin fragment PersonsFragment
-public class PersonsFragment extends Fragment implements GoodsAdapterOnClickHandler {
+public class PersonsFragment extends Fragment implements PersonsAdapterOnClickHandler {
 
     /* CONSTANTS */
 
     /* Integers */
 
-    public static final int GOODS_NUMBER = 20; // ditto
+    public static final int PERSON_NUMBER = 20; // ditto
     
     /* Strings */
 
@@ -44,18 +50,19 @@ public class PersonsFragment extends Fragment implements GoodsAdapterOnClickHand
     
     /* VARIABLES */
 
-    /* GoodsAdapters */
-
-    private GoodsAdapter mGoodsAdapter; // ditto
-
     /* Lists */
 
-    private List< BakedGood > mBakedGoods; // ditto
+    private List< Person > mPersons; // ditto
+
+    /* PersonsAdapters */
+
+    private PersonsAdapter mPersonsAdapter; // ditto
+
 
     /* RecyclerViews */
 
-    @BindView( R2.id.goods_rv_list )
-    public RecyclerView mGoodsRecyclerView; // ditto
+    @BindView( R2.id.persons_rv_list )
+    public RecyclerView mPersonsRecyclerView; // ditto
 
     /* CONSTRUCTOR */
 
@@ -76,7 +83,7 @@ public class PersonsFragment extends Fragment implements GoodsAdapterOnClickHand
 
         // 0. inflate the layout for this fragment
         // 1. bind
-        // 2. get a list of goods
+        // 2. get a list of persons
         // 3. the recycler
         // 3a. use a linear layout manager
         // 3b. has fixed size
@@ -85,31 +92,31 @@ public class PersonsFragment extends Fragment implements GoodsAdapterOnClickHand
 
         // 0. inflate the layout for this fragment
 
-        View rootView = inflater.inflate( R.layout.fragment_goods, container, false );
+        View rootView = inflater.inflate( R.layout.fragment_persons, container, false );
 
         // 1. bind
 
         ButterKnife.bind( this, rootView );
 
-        // 2. get a list of goods
+        // 2. get a list of persons
 
-        mBakedGoods = generateBakedGoods();
+        mPersons = generatePersons();
 
         // 2. the recycler
 
         // 2a. use a linear layout manager
 
-        mGoodsRecyclerView.setLayoutManager( new LinearLayoutManager( getActivity() ) );
+        mPersonsRecyclerView.setLayoutManager( new LinearLayoutManager( getActivity() ) );
 
         // 2b. has fixed size
 
-        mGoodsRecyclerView.setHasFixedSize( true );
+        mPersonsRecyclerView.setHasFixedSize( true );
 
         // 2c. set adapter
 
-        mGoodsAdapter = new GoodsAdapter( getActivity(), mBakedGoods, this );
+        mPersonsAdapter = new PersonsAdapter( mPersons, this, getActivity() );
 
-        mGoodsRecyclerView.setAdapter( mGoodsAdapter );
+        mPersonsRecyclerView.setAdapter( mPersonsAdapter );
 
         // last. return the inflated view
 
@@ -120,84 +127,94 @@ public class PersonsFragment extends Fragment implements GoodsAdapterOnClickHand
     /**
      * Listener for when a good item in the recycler is clicked.
      *
-     * @param clickedHolder The {@link GoodViewHolder} that has been clicked.
+     * @param clickedHolder The {@link com.joslittho.farajaweka.viewholder.PersonViewHolder} that has been clicked.
      * */
     @Override
     // begin onClick
-    public void onClick( GoodViewHolder clickedHolder ) {
+    public void onClick( PersonViewHolder clickedHolder ) {
+
+        // 0. get the gender of the clicked person
+        // 1. put the gender in an intent
+        // 2. start the person details activity using the intent
 
         // 0. get the picture of the clicked item
-        // 1. put the picture in an intent
-        // 2. start the selected good activity using the intent
 
-        // 0. get the picture of the clicked item
+        GENDER gender = mPersons.get( clickedHolder.getAdapterPosition() ).getGender();
 
-        int imageRes = mBakedGoods.get( clickedHolder.getAdapterPosition() ).getPicture();
+        // 1. put the gender in an intent
 
-        // 1. put the picture in an intent
+        Intent detailsIntent = new Intent( getActivity(), PersonDetailsActivity.class )
+                .putExtra( PersonDetailsFragment.ARGUMENT_PICTURE, gender );
 
-        Intent selectedGoodIntent = new Intent( getActivity(), SelectedGoodActivity.class )
-                .putExtra( SelectedGoodFragment.ARGUMENT_PICTURE, imageRes );
+        // 2. start the person details activity using the intent
 
-        // 2. start the selected good activity using the intent
-
-        startActivity( selectedGoodIntent );
+        startActivity( detailsIntent );
 
     } // end onClick
 
     /* Other Methods */
 
     /**
-     * Helper method to generate goods for the list.
+     * Helper method to generate persons for the list.
      *
-     * @return An {@link ArrayList} of some generated goods.
+     * @return An {@link ArrayList} of some generated persons.
      * */
-    // begin generateBakedGoods
-    private ArrayList< BakedGood > generateBakedGoods() {
+    // begin generatePersons
+    private ArrayList< Person > generatePersons() {
 
-        ArrayList< BakedGood > goods = new ArrayList<>( GOODS_NUMBER );
+        ArrayList< Person > persons = new ArrayList<>( PERSON_NUMBER );
 
-        for ( int i = 0; i < GOODS_NUMBER; i++ ) {
+        Context context = getActivity();
 
-            int picture, value;
+        for ( int i = 0; i < PERSON_NUMBER; i++ ) {
 
             String name;
+
+            int age;
+
+            Person person;
 
             switch ( i % 4 ) {
 
                 case 0:
-                    picture = R.drawable.raisin_cake;
-                    value = 500;
-                    name = getString( R.string.raisin_cake );
+                    age = 34;
+                    name = "Cinthia Aloo";
+
+                    person = new Female.Builder( "F00" + String.valueOf( i ), name )
+                            .setAge( age ).build();
                     break;
 
                 case 1:
-                    picture = R.drawable.cookies;
-                    value = 600;
-                    name = getString( R.string.cookies );
+                    age = 36;
+                    name = "Phinehas Band";
+
+                    person = new Male.Builder( "M00" + String.valueOf( i ), name )
+                            .setAge( age ).build();
                     break;
 
                 case 2:
-                    picture = R.drawable.muffins;
-                    value = 700;
-                    name = getString( R.string.muffins );
+                    age = 29;
+                    name = "Arnette Ali";
+
+                    person = new Female.Builder( "F00" + String.valueOf( i ), name )
+                            .setAge( age ).build();
                     break;
 
                 case 3: default:
-                    picture = R.drawable.shortcake;
-                    value = 800;
-                    name = getString( R.string.shortcake );
+                    age = 27;
+                    name = "Joel Mwita";
+
+                    person = new Male.Builder( "M00" + String.valueOf( i ), name )
+                            .setAge( age ).build();
                     break;
             }
 
-            BakedGood good = new BakedGood( name, picture, value );
-
-            goods.add( good );
+            persons.add( person );
 
         }
 
-        return goods;
+        return persons;
 
-    } // end generateBakedGoods
+    } // end generatePersons
 
 } // end fragment PersonsFragment

@@ -6,6 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.joslittho.farajaweka.R;
+import com.joslittho.farajaweka.model.Person;
+import com.joslittho.farajaweka.utils.Utility;
+import com.joslittho.farajaweka.viewholder.PersonViewHolder;
+
 import java.util.List;
 
 /**
@@ -13,7 +18,7 @@ import java.util.List;
  * {@link android.support.v7.widget.RecyclerView}.
  */
 // begin class PersonsAdapter
-public class PersonsAdapter extends RecyclerView.Adapter< GoodViewHolder > {
+public class PersonsAdapter extends RecyclerView.Adapter< PersonViewHolder > {
 
     /* CONSTANTS */
     
@@ -23,30 +28,40 @@ public class PersonsAdapter extends RecyclerView.Adapter< GoodViewHolder > {
 
     /* VARIABLES */
 
-    /* GoodsAdapterOnClickHandlers */
+    /* Contexts */
 
-    public GoodsAdapterOnClickHandler mGoodsAdapterOnClickHandler; // ditto
+    private Context mContext; // ditto
 
     /* Lists */
 
-    private List< BakedGood > mGoods; // ditto
+    private List< Person > mPersons; // ditto
+
+    /* PersonsAdapterOnClickHandler */
+
+    public PersonsAdapterOnClickHandler mPersonsAdapterOnClickHandler; // ditto
+
 
     /* CONSTRUCTOR */
 
     // begin constructor
-    public PersonsAdapter( Context context, List< BakedGood > goods,
-                           GoodsAdapterOnClickHandler clickHandler ) {
+    public PersonsAdapter( List< Person > goods, PersonsAdapterOnClickHandler clickHandler,
+                           Context context ) {
 
         // 0. initialize the list
         // 1. initialize the click handler
+        // 2. initialize the context
 
         // 0. initialize the list
 
-        mGoods = goods;
+        mPersons = goods;
 
         // 1. initialize the click handler
 
-        mGoodsAdapterOnClickHandler = clickHandler;
+        mPersonsAdapterOnClickHandler = clickHandler;
+
+        // 2. initialize the context
+
+        mContext = context;
 
     } // end constructor
 
@@ -58,7 +73,7 @@ public class PersonsAdapter extends RecyclerView.Adapter< GoodViewHolder > {
 
     @Override
     // begin onCreateViewHolder
-    public GoodViewHolder onCreateViewHolder( ViewGroup parent, int viewType ) {
+    public PersonViewHolder onCreateViewHolder( ViewGroup parent, int viewType ) {
 
         // 0. inflate the correct layout using the parent view group's context
         // 1. return a view holder using the inflated view and this adapter
@@ -70,41 +85,41 @@ public class PersonsAdapter extends RecyclerView.Adapter< GoodViewHolder > {
 
         // 1. return a view holder using the inflated view and this adapter
 
-        return new GoodViewHolder( view, this );
+        return new PersonViewHolder( view, this );
 
     } // end onCreateViewHolder
 
     @Override
     // begin onBindViewHolder
-    public void onBindViewHolder( GoodViewHolder goodViewHolder, int position ) {
+    public void onBindViewHolder( PersonViewHolder personViewHolder, int position ) {
 
         // 0. for the list item at this position, show the correct
-        // 0a. picture
+        // 0a. gender
         // 0b. name
-        // 0c. value
+        // 0c. age
 
         // 0. for the list item at this position, show the correct
 
-        BakedGood currentGood = mGoods.get( position );
+        Person currentPerson = mPersons.get( position );
 
-        // 0a. picture
+        // 0a. gender
 
-        goodViewHolder.mPictureImageView.setImageResource( currentGood.getPicture() );
+        personViewHolder.mGenderTextView.setText( Utility.getGenderShortForm( mContext, currentPerson ) );
 
         // 0b. name
 
-        goodViewHolder.mNameTextView.setText( currentGood.getName() );
+        personViewHolder.mNameTextView.setText( currentPerson.getName() );
 
-        // 0c. value
+        // 0c. age
 
-        goodViewHolder.mValueTextView.setText( String.valueOf( currentGood.getPrice() ) + " XOF" );
+        personViewHolder.mAgeTextView.setText( Utility.getAgeDisplayString( mContext, currentPerson ) );
 
     } // end onBindViewHolder
 
     @Override
     // getItemCount
     public int getItemCount() {
-        return mGoods.size();
+        return mPersons.size();
     }
 
     /* Other Methods */
