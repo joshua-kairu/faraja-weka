@@ -247,7 +247,7 @@ public class Male extends Person {
             return this;
         }
 
-        public Male createMale() {
+        public Male build() {
             return new Male( uniqueID, name, age, phoneNumber, location, bloodPressure, weight,
                     height, bmi, bloodGlucose, hasHistoryOfCancer, hasPriorHistoryOfCancerInFamily,
                     historyFamilyCancers, hasHistoryOfSmokingCigarettes, breastExamination,

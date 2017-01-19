@@ -416,7 +416,7 @@ public class Female extends Person {
             return this;
         }
 
-        public Female createFemale() {
+        public Female build() {
             return new Female( uniqueID, name, age, phoneNumber, location, bloodPressure, weight,
                     height, bmi, bloodGlucose, hasHistoryOfCancer, hasPriorHistoryOfCancerInFamily,
                     historyFamilyCancers, hasHistoryOfSmokingCigarettes, hasBeenPregnant,
