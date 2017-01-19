@@ -16,15 +16,18 @@
 
     android:paddingBottom="@dimen/space_between_content_areas"
 
+    android:paddingLeft="@dimen/layout_padding"
+
+    android:paddingRight="@dimen/layout_padding"
     >
 
     <!-- text for the person's gender -->
 
     <TextView
 
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/person_list_item_gender_text_height"
 
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/person_list_item_gender_text_height"
 
         android:id="@+id/person_list_item_tv_gender"
 
@@ -82,7 +85,7 @@
 
         android:layout_centerVertical="true"
 
-        style="@style/TextAppearance.AppCompat.Headline"
+        style="@style/TextAppearance.AppCompat.Body1"
 
         tools:text="25 years"
 
