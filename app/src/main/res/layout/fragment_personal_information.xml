@@ -18,15 +18,15 @@
 
     >
 
-    <!-- text for the unique ID -->
+    <!-- text for gender -->
 
     <TextView
 
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
 
         android:layout_height="@dimen/form_item_height"
 
-        android:id="@+id/personal_info_tv_unique_id"
+        android:id="@+id/personal_info_tv_gender_label"
 
         android:layout_marginTop="@dimen/space_between_content_areas"
 
@@ -34,9 +34,81 @@
 
         android:gravity="center_vertical"
 
+        android:text="Gender:"
+
+        tools:width="120dp"
+
         style="@style/TextAppearance.AppCompat.Title"
 
-        tools:text="Unique ID: M001"
+        />
+
+    <!-- spinner for gender choice -->
+
+    <Spinner
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/personal_info_s_gender"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:layout_toEndOf="@id/personal_info_tv_gender_label"
+
+        tools:width="120dp"
+
+        />
+
+    <!-- label for the unique ID -->
+
+    <TextView
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/personal_info_tv_unique_id_label"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:layout_below="@id/personal_info_tv_gender_label"
+
+        android:gravity="center_vertical"
+
+        android:text="Unique ID:"
+
+        style="@style/TextAppearance.AppCompat.Title"
+
+        />
+
+    <!-- value of the unique ID -->
+
+    <TextView
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="@dimen/form_item_height"
+
+        android:id="@+id/personal_info_tv_unique_id_value"
+
+        android:layout_marginTop="@dimen/space_between_content_areas"
+
+        android:layout_marginBottom="@dimen/space_between_content_areas"
+
+        android:layout_below="@id/personal_info_tv_gender_label"
+
+        android:layout_toEndOf="@id/personal_info_tv_gender_label"
+
+        android:gravity="center_vertical"
+
+        style="@style/TextAppearance.AppCompat.Title"
+
+        tools:text="M001"
 
         />
 
@@ -54,7 +126,7 @@
 
         android:layout_marginBottom="@dimen/space_between_content_areas"
 
-        android:layout_below="@id/personal_info_tv_unique_id"
+        android:layout_below="@id/personal_info_tv_unique_id_label"
 
         >
 
@@ -90,7 +162,7 @@
 
         android:layout_marginStart="@dimen/space_between_content_areas"
 
-        android:layout_below="@id/personal_info_tv_unique_id"
+        android:layout_below="@id/personal_info_tv_unique_id_label"
 
         >
 

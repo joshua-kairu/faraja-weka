@@ -133,18 +133,25 @@ public class PersonsFragment extends Fragment implements PersonsAdapterOnClickHa
     // begin onClick
     public void onClick( PersonViewHolder clickedHolder ) {
 
-        // 0. get the gender of the clicked person
-        // 1. put the gender in an intent
+        // 0. get the details of the clicked person
+        // 1. put the details in an intent
         // 2. start the person details activity using the intent
 
-        // 0. get the picture of the clicked item
+        // 0. get the details of the clicked item
 
-        GENDER gender = mPersons.get( clickedHolder.getAdapterPosition() ).getGender();
+        Person currentPerson = mPersons.get( clickedHolder.getAdapterPosition() );
+        GENDER gender = currentPerson.getGender();
+        String uniqueId = currentPerson.getUniqueID();
+        String name = currentPerson.getName();
+        int age = currentPerson.getAge();
 
-        // 1. put the gender in an intent
+        // 1. put the details in an intent
 
         Intent detailsIntent = new Intent( getActivity(), PersonDetailsActivity.class )
-                .putExtra( PersonDetailsFragment.ARGUMENT_PICTURE, gender );
+                .putExtra( PersonDetailsFragment.ARGUMENT_GENDER, gender )
+                .putExtra( PersonDetailsFragment.ARGUMENT_UNIQUE_ID, uniqueId )
+                .putExtra( PersonDetailsFragment.ARGUMENT_NAME, name )
+                .putExtra( PersonDetailsFragment.ARGUMENT_AGE, age );
 
         // 2. start the person details activity using the intent
 

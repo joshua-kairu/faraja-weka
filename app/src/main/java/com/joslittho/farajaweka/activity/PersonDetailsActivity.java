@@ -4,6 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.joslittho.farajaweka.R;
+import com.joslittho.farajaweka.fragment.PersonDetailsFragment;
+import com.joslittho.farajaweka.model.Person;
+import com.joslittho.farajaweka.model.Person.GENDER;
+
+import static com.joslittho.farajaweka.fragment.PersonDetailsFragment.ARGUMENT_AGE;
+import static com.joslittho.farajaweka.fragment.PersonDetailsFragment.ARGUMENT_GENDER;
+import static com.joslittho.farajaweka.fragment.PersonDetailsFragment.ARGUMENT_NAME;
+import static com.joslittho.farajaweka.fragment.PersonDetailsFragment.ARGUMENT_UNIQUE_ID;
 
 /**
  * {@link android.app.Activity} to display the selected good
@@ -38,8 +46,8 @@ public class PersonDetailsActivity extends AppCompatActivity {
 
         // 0. super stuff
         // 1. use the person details activity layout
-        // 2. get the picture from the extras
-        // 3. start the selected good fragment with the picture
+        // 2. get the person details from the extras
+        // 3. start the person details fragment with the details
 
         // 0. super stuff
 
@@ -49,21 +57,29 @@ public class PersonDetailsActivity extends AppCompatActivity {
 
         setContentView( R.layout.activity_person_details );
 
-        // 2. get the picture from the extras
+        // 2. get the person details from the extras
 
-//        Bundle bundle = getIntent().getExtras();
-//        int imageRes = bundle.getInt( SelectedGoodFragment.ARGUMENT_PICTURE );
+        Bundle bundle = getIntent().getExtras();
 
-        // 3. start the selected good fragment with the picture
+        GENDER gender = ( GENDER ) bundle.getSerializable( ARGUMENT_GENDER );
+
+        String uniqueID = bundle.getString( ARGUMENT_UNIQUE_ID );
+
+        String name = bundle.getString( ARGUMENT_NAME );
+
+        int age = bundle.getInt( ARGUMENT_AGE );
+
+        // 3. start the person details fragment with the details
 
         // begin if this is first run
-//        if ( savedInstanceState == null ) {
-//
-//            getSupportFragmentManager().beginTransaction()
-//                    .add( R.id.detail_fl_container, SelectedGoodFragment.newInstance( imageRes ) )
-//                    .commit();
-//
-//        } // end if this is first run
+        if ( savedInstanceState == null ) {
+
+            getSupportFragmentManager().beginTransaction()
+                    .add( R.id.detail_fl_container,
+                            PersonDetailsFragment.newInstance( gender, uniqueID, name, age ) )
+                    .commit();
+
+        } // end if this is first run
 
     } // end onCreate
     

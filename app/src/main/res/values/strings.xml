@@ -54,6 +54,12 @@
     <!-- short form of the female gender [CHAR LIMIT = 1] -->
     <string name="gender_female_short">F</string>
 
+    <!-- the female gender [CHAR LIMIT = 10] -->
+    <string name="female">Female</string>
+
+    <!-- the male gender [CHAR LIMIT = 10] -->
+    <string name="male">Male</string>
+
     <!-- Unique ID -->
 
     <!-- format for the unique ID. Should be GenderNumber eg M001 for the first male -->
