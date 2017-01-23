@@ -10,9 +10,7 @@
 
     android:layout_height="match_parent"
 
-    android:paddingLeft="@dimen/layout_padding"
-
-    android:paddingRight="@dimen/layout_padding"
+    android:padding="@dimen/layout_padding"
 
     >
 
@@ -47,8 +45,6 @@
         android:id="@+id/examination_male_prostate_rg_results"
 
         android:layout_marginTop="@dimen/space_between_content_areas"
-
-        android:layout_marginBottom="@dimen/space_between_content_areas"
 
         android:layout_below="@id/examination_male_include_breast"
 

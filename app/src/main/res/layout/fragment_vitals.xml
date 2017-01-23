@@ -6,15 +6,11 @@
 
     xmlns:android="http://schemas.android.com/apk/res/android"
 
-    xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
 
-    android:paddingStart="@dimen/layout_padding"
-
-    android:paddingEnd="@dimen/layout_padding"
+    android:padding="@dimen/layout_padding"
 
     >
 
@@ -27,8 +23,6 @@
         android:layout_height="wrap_content"
 
         android:id="@+id/vitals_til_blood_pressure"
-
-        android:layout_marginTop="@dimen/space_between_content_areas"
 
         android:layout_marginBottom="@dimen/space_between_content_areas"
 
@@ -106,7 +100,7 @@
 
             android:hint="Height in centimeters"
 
-            android:text="172 cm"
+            android:text="172"
 
             />
 
@@ -153,8 +147,6 @@
         android:layout_height="wrap_content"
 
         android:layout_marginTop="@dimen/space_between_content_areas"
-
-        android:layout_marginBottom="@dimen/space_between_content_areas"
 
         android:id="@+id/vitals_til_blood_glucose"
 

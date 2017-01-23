@@ -6,15 +6,9 @@
 
     xmlns:android="http://schemas.android.com/apk/res/android"
 
-    xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
-
-    android:layout_marginTop="@dimen/space_between_content_areas"
-
-    android:layout_marginBottom="@dimen/space_between_content_areas"
 
     >
 
@@ -24,13 +18,13 @@
 
         android:layout_width="match_parent"
 
-        android:layout_height="@dimen/form_item_height"
+        android:layout_height="wrap_content"
 
         android:id="@+id/examination_breast_tv_results"
 
-        android:layout_centerVertical="true"
-
         android:text="What were the results of breast examination?"
+
+        style="@style/TextAppearance.AppCompat.Title"
 
         />
 
@@ -38,7 +32,7 @@
 
     <RadioGroup
 
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"
 
@@ -62,6 +56,8 @@
 
             android:text="Not done"
 
+            style="@style/TextAppearance.AppCompat.Title"
+
             />
 
         <!-- result normal -->
@@ -75,6 +71,8 @@
             android:id="@+id/examination_breast_rb_normal"
 
             android:text="Normal"
+
+            style="@style/TextAppearance.AppCompat.Title"
 
             />
 
@@ -90,6 +88,8 @@
 
             android:text="Skin changes"
 
+            style="@style/TextAppearance.AppCompat.Title"
+
             />
 
         <!-- result nipple discharge -->
@@ -103,6 +103,8 @@
             android:id="@+id/examination_breast_rb_nipple_discharge"
 
             android:text="Nipple discharge"
+
+            style="@style/TextAppearance.AppCompat.Title"
 
             />
 
@@ -118,6 +120,8 @@
 
             android:text="Mass"
 
+            style="@style/TextAppearance.AppCompat.Title"
+
             />
 
     </RadioGroup>
@@ -126,7 +130,7 @@
 
     <RadioGroup
 
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
 
         android:layout_height="wrap_content"
 
@@ -144,7 +148,7 @@
 
         <RadioButton
 
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
 
             android:layout_height="@dimen/form_item_height"
 
@@ -152,13 +156,15 @@
 
             android:text="RHS"
 
+            style="@style/TextAppearance.AppCompat.Title"
+
             />
 
         <!-- a mass on the LHS (Left Hand Side) -->
 
         <RadioButton
 
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
 
             android:layout_height="@dimen/form_item_height"
 
@@ -166,19 +172,23 @@
 
             android:text="LHS"
 
+            style="@style/TextAppearance.AppCompat.Title"
+
             />
 
         <!-- a mass found bilaterally -->
 
         <RadioButton
 
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
 
             android:layout_height="@dimen/form_item_height"
 
             android:id="@+id/examination_breast_rb_mass_bilateral"
 
             android:text="Bilateral"
+
+            style="@style/TextAppearance.AppCompat.Title"
 
             />
 

@@ -10,9 +10,7 @@
 
     android:layout_height="match_parent"
 
-    android:paddingStart="@dimen/layout_padding"
-
-    android:paddingEnd="@dimen/layout_padding"
+    android:padding="@dimen/layout_padding"
 
     >
 
@@ -25,8 +23,6 @@
         android:layout_height="wrap_content"
 
         android:id="@+id/personal_info_tv_gender_label"
-
-        android:layout_marginTop="@dimen/space_between_content_areas"
 
         android:layout_marginBottom="@dimen/space_between_content_areas"
 
@@ -213,8 +209,6 @@
         android:layout_height="wrap_content"
 
         android:layout_marginTop="@dimen/space_between_content_areas"
-
-        android:layout_marginBottom="@dimen/space_between_content_areas"
 
         android:id="@+id/personal_info_til_location"
 

@@ -6,15 +6,11 @@
 
     xmlns:android="http://schemas.android.com/apk/res/android"
 
-    xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
 
-    android:paddingLeft="@dimen/layout_padding"
-
-    android:paddingRight="@dimen/layout_padding"
+    android:padding="@dimen/layout_padding"
 
     >
 
@@ -22,15 +18,11 @@
 
     <android.support.design.widget.TextInputLayout
 
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
 
-        android:layout_height="@dimen/form_item_height"
+        android:layout_height="wrap_content"
 
         android:id="@+id/referrals_til_referrals"
-
-        android:layout_marginTop="@dimen/space_between_content_areas"
-
-        android:layout_marginBottom="@dimen/space_between_content_areas"
 
         >
 
@@ -46,7 +38,7 @@
 
             android:inputType="textMultiLine"
 
-            tools:text="One other awesome referral"
+            android:gravity="top|start"
 
             />
 

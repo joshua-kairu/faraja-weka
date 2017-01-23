@@ -101,11 +101,15 @@
 
     <!-- form item height -->
 
-    <dimen name="form_item_height">48dp</dimen>
+    <dimen name="form_item_height">@dimen/listview_item_height</dimen>
 
     <!-- margin for nesting radio button groups the second time.
     The first nesting margin is 16dp so the second one should be 32dp -->
 
     <dimen name="radio_group_second_margin">32dp</dimen>
+
+    <!-- margin for the text input for other cervical result abnormalities -->
+
+    <dimen name="other_cervical_abnormalities_margin">64dp</dimen>
 
 </resources>
