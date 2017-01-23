@@ -2,7 +2,7 @@
 
 <!-- layout for the examination fragment when the person is male -->
 
-<RelativeLayout
+<ScrollView
 
     xmlns:android="http://schemas.android.com/apk/res/android"
 
@@ -10,88 +10,124 @@
 
     android:layout_height="match_parent"
 
-    android:padding="@dimen/layout_padding"
-
     >
 
-    <!-- Breast examination -->
-
-    <include
-
-        android:id="@+id/examination_male_include_breast"
-
-        layout="@layout/layout_breast_examination"
-
-        android:layout_width="match_parent"
-
-        android:layout_height="match_parent"
-
-        />
-
-    <!-- Prostate examination -->
-
-    <!-- radio group for the results of prostate examination -->
-
-    <RadioGroup
+    <RelativeLayout
 
         android:layout_width="match_parent"
 
         android:layout_height="wrap_content"
 
-        android:orientation="vertical"
-
-        android:layout_marginStart="@dimen/layout_padding"
-
-        android:id="@+id/examination_male_prostate_rg_results"
-
-        android:layout_marginTop="@dimen/space_between_content_areas"
-
-        android:layout_below="@id/examination_male_include_breast"
+        android:padding="@dimen/layout_padding"
 
         >
 
-        <!-- examination not done -->
+        <!-- Breast examination -->
 
-        <RadioButton
+        <include
 
-            android:layout_width="match_parent"
+            android:id="@+id/examination_male_include_breast"
 
-            android:layout_height="@dimen/form_item_height"
-
-            android:id="@+id/examination_male_prostate_rb_not_done"
-
-            android:text="Not done"
-
-            />
-
-        <!-- examination result normal -->
-
-        <RadioButton
+            layout="@layout/layout_breast_examination"
 
             android:layout_width="match_parent"
 
-            android:layout_height="@dimen/form_item_height"
-
-            android:id="@+id/examination_male_prostate_rb_normal"
-
-            android:text="Normal"
+            android:layout_height="match_parent"
 
             />
 
-        <!-- examination result abnormal -->
+        <!-- Prostate examination -->
 
-        <RadioButton
+        <!-- label for results of cervical examination -->
+
+        <TextView
 
             android:layout_width="match_parent"
 
-            android:layout_height="@dimen/form_item_height"
+            android:layout_height="wrap_content"
 
-            android:id="@+id/examination_male_prostate_rb_abnormal"
+            android:id="@+id/examination_male_prostate_tv_results"
 
-            android:text="Abnormal"
+            android:text="What were the results of prostate examination?"
+
+            android:layout_below="@id/examination_male_include_breast"
+
+            android:layout_marginTop="@dimen/space_between_content_areas"
+
+            style="@style/TextAppearance.AppCompat.Title"
 
             />
 
-    </RadioGroup>
+        <!-- radio group for the results of prostate examination -->
 
-</RelativeLayout>
+        <RadioGroup
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+            android:layout_marginStart="@dimen/layout_padding"
+
+            android:id="@+id/examination_male_prostate_rg_results"
+
+            android:layout_marginTop="@dimen/space_between_content_areas"
+
+            android:layout_below="@id/examination_male_prostate_tv_results"
+
+            >
+
+            <!-- examination not done -->
+
+            <RadioButton
+
+                android:layout_width="match_parent"
+
+                android:layout_height="@dimen/form_item_height"
+
+                android:id="@+id/examination_male_prostate_rb_not_done"
+
+                android:text="Not done"
+
+                style="@style/TextAppearance.AppCompat.Title"
+
+                />
+
+            <!-- examination result normal -->
+
+            <RadioButton
+
+                android:layout_width="match_parent"
+
+                android:layout_height="@dimen/form_item_height"
+
+                android:id="@+id/examination_male_prostate_rb_normal"
+
+                android:text="Normal"
+
+                style="@style/TextAppearance.AppCompat.Title"
+
+                />
+
+            <!-- examination result abnormal -->
+
+            <RadioButton
+
+                android:layout_width="match_parent"
+
+                android:layout_height="@dimen/form_item_height"
+
+                android:id="@+id/examination_male_prostate_rb_abnormal"
+
+                android:text="Abnormal"
+
+                style="@style/TextAppearance.AppCompat.Title"
+
+                />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</ScrollView>

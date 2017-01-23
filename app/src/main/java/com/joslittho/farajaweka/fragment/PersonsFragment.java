@@ -30,7 +30,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * {@link Fragment} to hold the list of goods
+ * {@link Fragment} to hold the list of persons
  */
 // begin fragment PersonsFragment
 public class PersonsFragment extends Fragment implements PersonsAdapterOnClickHandler {
