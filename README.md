@@ -2,7 +2,7 @@
 
 ##Introduction
 
-A ***currently in demonstration stage*** Android app for the Faraja Cancer Support Trust's cancer screening initiative. The Faraja homepage is https://farajacancersupport.org/. 
+This repository holds a ***currently in demonstration stage*** Android app for the Faraja Cancer Support Trust's cancer screening initiative. The Faraja homepage is https://farajacancersupport.org/. 
 
 ## Version History :package:
 
