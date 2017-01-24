@@ -6,7 +6,8 @@ A ***currently in demonstration stage*** Android app for the Faraja Cancer Suppo
 
 ## Version History :package:
 
-**latest** 	[Faraja Weka v0.0.1](https://github.com/joshua-kairu/xml-test/releases/download/v1.0/hearty-v1.0.0.apk) 	Thursday, July 21, 2016
+**Click this link for the latest version:** 	[Faraja Weka v0.1-alpha](https://github.com/joshua-kairu/faraja-weka/releases/download/v0.1-alpha/faraja-weka-v0.1-alpha.apk) (Tuesday, 24. January 2017)
+
 
 This repo tries its best to follow the [Semantic Versioning](http://semver.org/) guidelines.
 
