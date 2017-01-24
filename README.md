@@ -64,7 +64,7 @@ This tab varies based on gender since different medical histories are needed for
 
 For **males**, medical history taken includes histories of cancer, cancer in the family, and smoking cigarettes. The tab looks as follows:
 
-![The Medical History tab for males](screen-records/person-details-male-medical-history-2017-01-23-165426.gif) 
+![The Medical History tab for males](screen-records/person-details-male-medical-history-2017-01-23-165345.gif) 
 
 For **females**, medical history taken includes histories of pregrancy and children, as well as those in the males section. The tab looks as follows:
 
